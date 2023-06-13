@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Parking Lot</title>
-
     <link rel="stylesheet" href="style/style-login.css">
 </head>
 <body>
@@ -14,11 +13,8 @@
             <img src="img/login.png" alt="Avatar" style="width: 35%; border-radius: 50%">
             <h2> WELCOME </h2>
         </div>
-        <?php
-        require "module/koneksi.php";
-        ?>
-        <form method="post" class="form">
-            <label for="username" style="padding-top: 6px; margin-left: 10px">
+        <form method="post" class="form" action="module/login.php">
+            <label for="username" style="margin-left: 10px">
             &nbsp;
             <b>USERNAME</b>
             </label>
@@ -32,7 +28,7 @@
             </label>
             <input type="password" id="password" class="form-konten" name="password" required/>
             <div class="form-border"></div>
-            <button id="submit-btn" type="submit" value="login">LOGIN</button>
+            <button id="submit-btn" type="submit">LOGIN</button>
         </form>
     </div>
 </body>
