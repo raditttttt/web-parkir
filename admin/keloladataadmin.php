@@ -18,35 +18,49 @@ $data=mysqli_fetch_array($result);
 </head>
 <body>
     <style>
-    body{
-        display: grid;
-        background-color: #212121;
-        color: #f6f1f1;
-        grid-template-rows: auto auto;
-        padding: 70px;
-        row-gap: 50px;
-        
-    }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: black;
+            color: white;
+        }
 
-    table{
-        background: #f6f1f1;
-        color: black;
-    }
+        .login-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-    td{
-        padding-block: 5px;
-    }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+        }
 
-    a{
-        color: white;
-    }
+        .login-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #FFFFFF;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
     <form action="">
-        <label for="username">username</label>
-        <input type="text" name="username" value="<?= $data['username']?>">
-        <label for="password">password</label>
-        <input type="text" name="password" value="<?= $data['password']?>">
-        <input type="submit" value="submit">
+        <h2>
+            Edit Akun Admin
+        </h2>
+        <label for="username" style="display: block; margin-right: 10px"></label>username</label>
+        <input type="text" name="username" style="padding: 5px; margin-top: 5px; display: block; margin-right: 50px; background: #f6f1f1; border: none" value="<?= $data['username']?>">
+        <label for="password" style="display: block; margin-top: 20px; margin-right: 10px"></label>password</label>
+        <input type="text" name="password" style="padding: 5px; margin-top: 5px; display: block; margin-right: 50px; background: #f6f1f1; border: none" value="<?= $data['password']?>">
+        <input type="submit" style="padding: 6px; margin-top: 30px; background: #f6f1f1; border: none" value="submit">
     </form>
+    <a href="index.php">kembali...</a>
 </body>
 </html>

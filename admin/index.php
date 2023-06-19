@@ -40,5 +40,11 @@
         <button> Parkir </button>
         <button> Grafik </button>
     </main>
+    <a href="../">keluar..
+        <style>
+            color: white;
+            font-family: 'Trebuchet MS';
+        </style>
+    </a>
 </body>
 </html>
