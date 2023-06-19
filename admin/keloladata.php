@@ -15,18 +15,36 @@ $result= mysqli_query($conn, $SQL);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola Data User</title>
 </head>
+<style>
+    body{
+        display: grid;
+        background-color: #212121;
+        color: #f6f1f1;
+        grid-template-rows: auto auto;
+        padding: 70px;
+        row-gap: 50px;
+    }
+
+    table{
+        background: #f6f1f1;
+        color: black;
+    }
+
+    td{
+        padding-block: 5px;
+    }
+</style>
 <body>
     <form action="">
         <h2>
             Tambah User
         </h2>
-        <label for="username">username</label>
-        <input type="text" name="username">
-        <label for="password">password</label>
-        <input type="text" name="password">
-        <input type="submit" value="submit">
+        <label for="username" style="margin-right: 10px">Username</label>
+        <input type="text" name="username" style="margin-right: 50px; background: #f6f1f1; border: none">
+        <label for="password" style="margin-right: 10px">Password</label>
+        <input type="text" name="password" style="margin-right: 50px; background: #f6f1f1; border: none">
+        <input type="submit" value="submit" style="background: #f6f1f1">
     </form>
-    <br>
     <table border='1' style="text-align: center">
         <tr>
             <td>Username</td>
