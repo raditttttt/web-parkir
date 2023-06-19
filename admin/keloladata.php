@@ -23,6 +23,7 @@ $result= mysqli_query($conn, $SQL);
         grid-template-rows: auto auto;
         padding: 70px;
         row-gap: 50px;
+        font-family:'trebuchet MS';
     }
 
     table{

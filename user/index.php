@@ -47,5 +47,6 @@
         <button onclick="window.location.href='akun.php'"> Edit Akun </button>
         <button onclick="window.location.href='parkiruser.php'"> Lihat Lokasi Parkir </button>
     </main>
+    <a href="../">kembali...</a>
 </body>
 </html>
