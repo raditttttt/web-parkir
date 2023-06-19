@@ -23,6 +23,8 @@ if(isset($_POST['username'])){
 
         } else {
             //kalau dia admin
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'User';
             header('location:../user');
