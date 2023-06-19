@@ -17,6 +17,30 @@ $data=mysqli_fetch_array($result);
     <title> Kelola Data Admin</title>
 </head>
 <body>
+    <style>
+    body{
+        display: grid;
+        background-color: #212121;
+        color: #f6f1f1;
+        grid-template-rows: auto auto;
+        padding: 70px;
+        row-gap: 50px;
+        
+    }
+
+    table{
+        background: #f6f1f1;
+        color: black;
+    }
+
+    td{
+        padding-block: 5px;
+    }
+
+    a{
+        color: white;
+    }
+    </style>
     <form action="">
         <label for="username">username</label>
         <input type="text" name="username" value="<?= $data['username']?>">
