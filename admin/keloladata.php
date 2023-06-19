@@ -33,6 +33,10 @@ $result= mysqli_query($conn, $SQL);
     td{
         padding-block: 5px;
     }
+
+    a{
+        color: white;
+    }
 </style>
 <body>
     <form action="">
@@ -40,10 +44,10 @@ $result= mysqli_query($conn, $SQL);
             Tambah User
         </h2>
         <label for="username" style="margin-right: 10px">Username</label>
-        <input type="text" name="username" style="margin-right: 50px; background: #f6f1f1; border: none">
+        <input type="text" name="username" style="padding: 5px; margin-right: 50px; background: #f6f1f1; border: none">
         <label for="password" style="margin-right: 10px">Password</label>
-        <input type="text" name="password" style="margin-right: 50px; background: #f6f1f1; border: none">
-        <input type="submit" value="submit" style="background: #f6f1f1">
+        <input type="text" name="password" style="padding: 5px; margin-right: 50px; background: #f6f1f1; border: none">
+        <input type="submit" value="submit" style="padding: 6px; background: #f6f1f1; border: none">
     </form>
     <table border='1' style="text-align: center">
         <tr>
@@ -55,10 +59,11 @@ $result= mysqli_query($conn, $SQL);
         <tr>
             <td><?= $data["username"] ?></td>
             <td><?= $data["password"] ?></td>
-            <td onclick="window.location.href='/'">edit</td>
+            <td onclick="window.location.href='./edit.php'">edit</td>
             <td onclick="window.location.href='/'">hapus</td>
         </tr>
         <?php endwhile; ?>
     </table>
+    <a href="index.php">kembali...</a>
 </body>
 </html>

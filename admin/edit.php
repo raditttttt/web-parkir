@@ -10,9 +10,9 @@
     <form method="post" action="proses_edit.php">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <label for="name">Nama:</label>
-        <input type="text" name="name" value="<?php echo $name; ?>"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" value="<?php echo $email; ?>"><br><br>
+        <input type="text" name="name" value="<?php echo $_SESSION['username']; ?>"><br><br>
+        <label for="email">Password:</label>
+        <input type="password" name="password" value="<?php echo $_SESSION['password']; ?>"><br><br>
         <input type="submit" name="submit" value="Update">
     </form>
 </body>
