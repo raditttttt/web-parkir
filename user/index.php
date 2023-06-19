@@ -32,9 +32,17 @@
         font-family: 'Trebuchet MS';
         font-weight: bold;
     }
-
 </style>
 <body>
+    <button onclick="window.location.href= '../'" style="height: 30px;
+        width: 60px;
+        color: black;
+        background: #f6f1f1;
+        border: none;
+        align: right;
+        margin-top: 28px;
+        margin-left: 28px;
+        margin-bottom: 50px">Kembali</button>
     <main>
         <button onclick="window.location.href='akun.php'"> Edit Akun </button>
         <button onclick="window.location.href='parkiruser.php'"> Lihat Lokasi Parkir </button>

@@ -22,7 +22,7 @@ if(isset($_POST['username'])){
             header('location:../admin');
 
         } else {
-            //kalau dia admin
+            //kalau dia user
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['log'] = 'Logged';
