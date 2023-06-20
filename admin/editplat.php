@@ -2,15 +2,15 @@
 include "../module/koneksi.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = $_POST['id'];
+    $nomorold = $_POST['nomorold'];
     $nomor = $_POST['nomor'];
 
     // Mengupdate plat nomor di database
-    $query = "UPDATE plat_nomor SET nomor='$nomor' WHERE id_pemilik='$id'";
+    $query = "UPDATE plat_nomor SET nomor='$nomor' WHERE nomor='$nomorold'";
     $result = mysqli_query($conn, $query);
 
     if ($result) {
-        header("Location: kelolaplatnomor.php");
+        echo "<script> alert ('Data berhasil diupdate');window.location.href='kelolaplatnomor.php?id_pemilik=$id_pemilik'</script>";
         exit();
     } else {
         echo "Gagal mengupdate plat nomor.";
@@ -18,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     mysqli_close($conn);
 } else {
-    $id = $_GET['id_pemilik'];
+    $id = $_GET['nomor'];
 
     // Mendapatkan data plat nomor berdasarkan ID dari database
-    $query = "SELECT * FROM plat_nomor WHERE id_pemilik='$id'";
+    $query = "SELECT * FROM plat_nomor WHERE nomor='$id'";
     $result = mysqli_query($conn, $query);
 
     $row = mysqli_fetch_assoc($result);
@@ -37,10 +37,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Plat Nomor</title>
 </head>
+<style>
+    body{
+        display: grid;
+        background-color: #212121;
+        color: #f6f1f1;
+        grid-template-rows: auto auto;
+    }
+
+    form{
+        margin: auto;
+    }
+
+    button{
+        height: 30px;
+        width: 60px;
+        color: black;
+        background: #f6f1f1;
+        border: none;
+        align: right;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+</style>
+
 <body>
-    <h2>Edit Plat Nomor</h2>
-    <form action="kelolaplatnomor.php" method="post">
-        <input type="hidden" name="id" value="<?= $id ?>">
+    <button onclick="window.location.href= 'kelolaplatnomor.php'">Kembali</button>
+    <form action="" method="post">
+        <h2>
+            Edit Plat Nomor
+        </h2>
+        <input type="hidden" name="nomorold" value="<?= $_GET['nomor'] ?>">
         <input type="text" name="nomor" value="<?= $nomor ?>" required>
         <input type="submit" value="Update">
     </form>

@@ -16,51 +16,43 @@ $data=mysqli_fetch_array($result);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Kelola Data Admin</title>
 </head>
+<style>
+    body{
+        display: grid;
+        background-color: #212121;
+        color: #f6f1f1;
+        grid-template-rows: auto auto;
+        font-family: 'Trebuchet MS';
+        font-weight: bold;
+    }
+
+    form{
+        margin: auto;
+    }
+
+    button{
+        height: 30px;
+        width: 60px;
+        color: black;
+        background: #f6f1f1;
+        border: none;
+        align: right;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+</style>
 <body>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background: black;
-            color: white;
-        }
-
-        .login-container {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 200px;
-            padding: 10px;
-            margin: 5px;
-        }
-
-        .login-container button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: #FFFFFF;
-            border-radius: 4px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
-    <form action="">
-        <h2>
-            Edit Akun Admin
-        </h2>
-        <label for="username" style="display: block; margin-right: 10px"></label>username</label>
-        <input type="text" name="username" style="padding: 5px; margin-top: 5px; display: block; margin-right: 50px; background: #f6f1f1; border: none" value="<?= $data['username']?>">
-        <label for="password" style="display: block; margin-top: 20px; margin-right: 10px"></label>password</label>
-        <input type="text" name="password" style="padding: 5px; margin-top: 5px; display: block; margin-right: 50px; background: #f6f1f1; border: none" value="<?= $data['password']?>">
-        <input type="submit" style="padding: 6px; margin-top: 30px; background: #f6f1f1; border: none" value="submit">
-    </form>
-    <a href="index.php">kembali...</a>
+    <button onclick=window.location.href='index.php'> Kembali </button>
+    <div style="margin: auto">
+        <h2 style="text-align: center">Edit Akun Admin</h2>
+        <form action="">
+            <label for="username" style="display: block"></label>Username</label>
+            <input required type="text" name="username" style="padding: 5px; margin-top: 5px; display: block; background: #f6f1f1; border: none" value="<?= $data['username']?>">
+            <label for="password" style="display: block; margin-top: 10px"></label>Password</label>
+            <input required type="text" name="password" style="padding: 5px; margin-top: 5px; display: block; background: #f6f1f1; border: none" value="<?= $data['password']?>">
+            <input type="submit" style="display: block; padding: 6px; margin-top: 20px; background: #f6f1f1; border: none" value="Update">
+        </form>
+    </div>
 </body>
 </html>

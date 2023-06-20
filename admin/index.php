@@ -9,6 +9,8 @@
     body{
         margin: 0;
         background: #212121;
+        font-family: 'Trebuchet MS';
+        font-weight: bold;
     }
 
     main{
@@ -33,18 +35,22 @@
 
 </style>
 <body>
+    <button onclick="window.location.href= '../'" style="height: 30px;
+            width: 60px;
+            color: black;
+            background: #f6f1f1;
+            border: none;
+            align: right;
+            margin-top: 28px;
+            margin-left: 28px;
+            margin-bottom: 50px">Kembali
+    </button>
     <main>
         <button onclick="window.location.href='keloladata.php'"> Kelola Data User </button>
         <button onclick="window.location.href='kelolaplatnomor.php'"> Kelola Plat Nomor </button>
         <button onclick="window.location.href='keloladataadmin.php'"> Kelola Data Admin </button>
-        <button> Parkir </button>
-        <button> Grafik </button>
+        <button onclick="window.location.href='menuparkir.php'"> Parkir </button>
+        <button onclick="window.location.href='grafik.php'"> Grafik </button>
     </main>
-    <a href="../">keluar..
-        <style>
-            color: white;
-            font-family: 'Trebuchet MS';
-        </style>
-    </a>
 </body>
 </html>

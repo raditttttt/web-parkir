@@ -9,6 +9,8 @@
     body{
         margin: 0;
         background: #212121;
+        font-family: 'Trebuchet MS';
+        font-weight: bold;
     }
 
     main{
@@ -42,11 +44,11 @@
         align: right;
         margin-top: 28px;
         margin-left: 28px;
-        margin-bottom: 50px">Kembali</button>
+        margin-bottom: 50px">Kembali
+    </button>
     <main>
         <button onclick="window.location.href='akun.php'"> Edit Akun </button>
         <button onclick="window.location.href='parkiruser.php'"> Lihat Lokasi Parkir </button>
     </main>
-    <a href="../">kembali...</a>
 </body>
 </html>

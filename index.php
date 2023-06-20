@@ -12,6 +12,12 @@
         <div id="title-kartu">
             <img src="img/login.png" alt="Avatar" style="width: 35%; border-radius: 50%">
             <h2> WELCOME </h2>
+<?php 
+date_default_timezone_set('Asia/Jakarta');
+echo date("H:i");?>
+<br>
+<?php echo date("d-m-Y");
+?>
         </div>
         <form method="post" class="form" action="module/login.php">
             <label for="username" style="margin-left: 10px">

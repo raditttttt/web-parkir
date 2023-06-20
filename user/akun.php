@@ -15,6 +15,8 @@ session_start();
         background-color: #212121;
         color: #f6f1f1;
         grid-template-rows: auto auto;
+        font-family: 'Trebuchet MS';
+        font-weight: bold;
     }
 
     form{
@@ -35,15 +37,15 @@ session_start();
 </style>
 <body>
     <button onclick="window.location.href= '../user/index.php'">Kembali</button>
-    <form action="../module/edituser.php" method="post">
-        <h2>
-            Edit Akun
-        </h2>
-        <label for="username" style="display: block; margin-right: 10px">Username</label>
-        <input required value="<?= $_SESSION['username'] ?>" type="text" name="username" style="padding: 5px; margin-top: 5px; margin-right: 50px; background: #f6f1f1; border: none">
-        <label for="password" style="display: block; margin-top: 20px; margin-right: 10px">Password</label>
-        <input required value="<?= $_SESSION['password'] ?>" type="text" name="password" style="padding: 5px; margin-top: 5px; display: block; margin-right: 50px; background: #f6f1f1; border: none">
-        <input type="submit" value="Update" style="padding: 6px; margin-top: 30px; background: #f6f1f1; border: none; display: block">
-    </form>
+    <div style="margin: auto">
+        <h2 style="text-align: center">Edit Akun</h2>
+        <form action="../module/edituser.php" method="post">
+            <label for="username" style="display: block">Username</label>
+            <input required value="<?= $_SESSION['username'] ?>" type="text" name="username" style="margin-top: 5px; padding: 5px; background: #f6f1f1; border: none">
+            <label for="password" style="margin-top: 10px; display: block">Password</label>
+            <input required value="<?= $_SESSION['password'] ?>" type="text" name="password" style="margin-top: 5px; padding: 5px; display: block; background: #f6f1f1; border: none">
+            <input type="submit" value="Update" style="margin-top: 20px; padding: 6px; background: #f6f1f1; border: none; display: block">
+        </form>
+    </div>
 </body>
 </html>

@@ -25,13 +25,14 @@ if(isset($_POST['username'])){
             //kalau dia user
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
+            $_SESSION['id'] = $ambildatarole['id'];
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'User';
             header('location:../user');
         }
     } else {
         //kalau tidak ditemukan
-        echo '<script>alert("Data tidak ditemukan")</script>';
+        echo '<script>alert("Data tidak ditemukan"); window.location.href="../"</script>';
     }
 }
 ?>
